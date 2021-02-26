@@ -55,3 +55,7 @@ configMapGenerator:
     behavior: merge
     files:
       - database.properties
+  - name: case-server-configmap
+    behavior: replace
+    files:
+      - application.yml=case-server-application.yml

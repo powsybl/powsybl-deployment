@@ -14,6 +14,9 @@ spec:
       labels:
         name: security-analysis-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
         - name: security-analysis-server
           image: docker.io/gridsuite/security-analysis-server:latest

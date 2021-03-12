@@ -14,6 +14,9 @@ spec:
       labels:
         name: geo-data-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: geo-data-server
         image: docker.io/gridsuite/geo-data-server:latest

@@ -13,6 +13,9 @@ spec:
       labels:
         name: apps-metadata-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
         - name: apps-metadata-server
           image: httpd:2.4

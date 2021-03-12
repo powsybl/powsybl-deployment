@@ -14,6 +14,9 @@ spec:
       labels:
         name: network-store-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: network-store-server
         image: docker.io/powsybl/network-store-server:latest

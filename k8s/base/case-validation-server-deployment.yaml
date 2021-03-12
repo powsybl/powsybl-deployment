@@ -14,6 +14,9 @@ spec:
       labels:
         name: case-validation-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: case-validation-server
         image: docker.io/gridsuite/case-validation-server:latest

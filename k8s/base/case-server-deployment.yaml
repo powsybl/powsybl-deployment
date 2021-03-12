@@ -16,6 +16,9 @@ spec:
       labels:
         name: case-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: case-server
         image: docker.io/powsybl/case-server:latest

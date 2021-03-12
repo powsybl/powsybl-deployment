@@ -14,6 +14,9 @@ spec:
       labels:
         name: config-notification-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: config-notification-server
         image: docker.io/gridsuite/config-notification-server:latest

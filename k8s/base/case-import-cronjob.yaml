@@ -8,6 +8,9 @@ spec:
     spec:
       template:
         spec:
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
           containers:
             - name: case-import-job
               image: docker.io/gridsuite/case-import-job:latest

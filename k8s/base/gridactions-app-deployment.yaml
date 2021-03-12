@@ -14,6 +14,9 @@ spec:
       labels:
         name: gridactions-app
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: gridactions-app
         image: docker.io/gridsuite/gridactions-app:latest

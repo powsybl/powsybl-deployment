@@ -14,6 +14,9 @@ spec:
       labels:
         name: network-conversion-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: network-conversion
         image: docker.io/powsybl/network-conversion-server:latest

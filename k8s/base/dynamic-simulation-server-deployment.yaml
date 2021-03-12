@@ -14,6 +14,9 @@ spec:
       labels:
         name: dynamic-simulation-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
         - name: dynamic-simulation
           image: docker.io/gridsuite/dynamic-simulation-server:latest

@@ -14,6 +14,9 @@ spec:
       labels:
         name: balances-adjustment-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
         - name: balances-adjustment-server
           image: docker.io/gridsuite/balances-adjustment-server:latest

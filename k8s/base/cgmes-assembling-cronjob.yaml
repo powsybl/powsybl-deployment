@@ -8,6 +8,9 @@ spec:
     spec:
       template:
         spec:
+          securityContext:
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
           containers:
             - name: cgmes-assembling-job
               image: docker.io/gridsuite/cgmes-assembling-job:latest

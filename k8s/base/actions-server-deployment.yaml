@@ -14,6 +14,9 @@ spec:
       labels:
         name: actions-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
         - name: actions-server
           image: docker.io/gridsuite/actions-server:latest

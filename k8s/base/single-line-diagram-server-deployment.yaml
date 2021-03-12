@@ -14,6 +14,9 @@ spec:
       labels:
         name: single-line-diagram-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: single-line-diagram-server
         image: docker.io/powsybl/single-line-diagram-server:latest

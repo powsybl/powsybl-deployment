@@ -14,6 +14,9 @@ spec:
       labels:
         name: gateway
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: gateway
         image: docker.io/gridsuite/gateway:latest

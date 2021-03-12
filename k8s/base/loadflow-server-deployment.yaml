@@ -14,6 +14,9 @@ spec:
       labels:
         name: loadflow-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: loadflow-server
         image: docker.io/gridsuite/loadflow-server:latest

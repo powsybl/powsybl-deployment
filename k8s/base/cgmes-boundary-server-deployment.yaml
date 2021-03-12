@@ -14,6 +14,9 @@ spec:
       labels:
         name: cgmes-boundary-server
     spec:
+      securityContext:
+        readOnlyRootFilesystem: true
+        runAsNonRoot: true
       containers:
       - name: cgmes-boundary-server
         image: docker.io/gridsuite/cgmes-boundary-server:latest
